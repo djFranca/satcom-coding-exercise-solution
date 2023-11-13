@@ -1,0 +1,28 @@
+.list-container {
+  height: 100%;
+  overflow-y: auto;
+
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+
+    .filters, .list-element {
+      padding: 10px;
+      background-color: #f3f3f3;
+      margin: 0 5px 10px;
+      border-radius: 4px;
+    }
+
+    .filters {
+      text-align: center;
+    }
+
+    .list-element {
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+

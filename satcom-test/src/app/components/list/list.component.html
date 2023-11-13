@@ -1,0 +1,13 @@
+<div class="list-container" style="display: flex; flex-grow: grow;">
+  <ul class="list">
+    <div class="filters">
+      <input type="text" [formControl]="filterForm" placeholder="Search element"/>
+    </div>
+    <li class="list-element" *ngFor="let component of (componentsToList$ | async)" (click)="onSelectedComponent(component)">
+      {{component.name}}
+    </li>
+  </ul>
+  <div class="viewer">
+    <app-viewer [eventEmitter]="addComponentEvent"></app-viewer>
+  </div>
+</div>
